@@ -1,0 +1,24 @@
+.ui[class*="one column"].grid>.column:not(.row),
+.ui[class*="one column"].grid>.row>.column {
+  width: 100% !important;
+}
+
+.ui.card {
+    width: 100%;
+}
+
+@media(min-width:400px) {
+
+  .ui[class*="one column"].grid>.column:not(.row),
+  .ui[class*="one column"].grid>.row>.column {
+    width: 50% !important;
+  }
+}
+
+
+@media(min-width:1000px) {
+    .ui[class*="one column"].grid>.column:not(.row),
+    .ui[class*="one column"].grid>.row>.column {
+      width: 25% !important;
+    }
+}

@@ -1,0 +1,24 @@
+<div class="ui two column grid">
+  <div class="column" *ngFor="let est of estudios">
+    <div class="ui card">
+      <div class="image">
+        <img src={{est.img}}>
+      </div>
+      <div class="content">
+        <a class="header" style="margin: 1em 0 1em 0;">{{ est.name }}</a>
+        <div class="description">
+          {{ est.desc }}
+        </div>
+        <div class="description">
+          {{ est.contact }}
+        </div>
+      </div>
+      <a href={{est.web}} target="_blank" class="extra content">
+        <button class="ui right floated tiny red right labeled icon button">
+          <i class="external alternate icon"></i>
+          Website
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
