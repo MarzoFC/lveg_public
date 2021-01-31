@@ -1,5 +1,9 @@
-#lavidaesgratis
+#LA VIDA ES GRATIS
 
+Single page web app that retrieves data from a MySQL database, and uses the YouTube API to fetch the videos from a channel. 
+
+
+#INSTRUCTIONS:
 cd lvegcode 
 
 node ./server.js 
