@@ -1,10 +1,10 @@
-export interface Person {
+export class Person {
     id:number;
     name:String;
-    desc:String;
-    web:String;
-    contact:String;
-    img:String;
     rol:String;
+    website:String;
+    contact:String;
+    info:String;
+    img:String;
   }
   

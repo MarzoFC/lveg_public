@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PersonsService } from '../persons.service';
+import { Person } from '../shared/models/person.interface';
 //import {Estudios} from './estudios'
 
 @Component({
@@ -8,11 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EstudiosComponent implements OnInit {
 
-  estudios = [];
+  estudios:Person[];
 
-  constructor() { }
+  constructor(private personsService: PersonsService) { }
 
   ngOnInit() {
+    this.personsService.getEstus().subscribe((data: Person[])=>{
+      console.log(data);
+      this.estudios = data;})
   }
+
 
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PersonsService } from '../persons.service';
+import {Person} from '../shared/models/person.interface'
 @Component({
   selector: 'app-visuales',
   templateUrl: './visuales.component.html',
@@ -6,11 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VisualesComponent implements OnInit {
 
-  visuales = [];
+  visuales:Person[];
   
-  constructor() { }
+  constructor(private personsService: PersonsService) { }
 
   ngOnInit() {
+    this.personsService.getViss().subscribe((data: Person[])=>{
+      console.log(data);
+      this.visuales = data;})
   }
+
 
 }

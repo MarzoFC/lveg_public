@@ -2,9 +2,9 @@ const mysql = require('mysql');
 
 const config = {
     host: 'localhost',
-    user: 'app',
-    password: 'app',
-    database: 'app',
+    user: 'id15969095_database',
+    password: 'C\(9<vPQXi&_?!df',
+    database: 'id15969095_app',
 };
 
 const pool = mysql.createPool(config);

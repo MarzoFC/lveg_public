@@ -1,0 +1,40 @@
+
+<h2>Login</h2>
+
+
+<div>
+  <div class="submit-form">
+    
+      <div class="form-group">
+        <label for="name">user</label>
+        <input
+          type="text"
+          class="form-control"
+          id="user"
+          required
+          [(ngModel)]="user.user"
+          name="user"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password">password</label>
+        <input
+          class="form-control"
+          id="password"
+          required
+          [(ngModel)]="user.password"
+          name="password"
+        />
+      </div>
+
+
+      <button (click)="login()" class="btn btn-success">Submit</button>
+    </div>
+
+    <div *ngIf="logged">
+      <h4>LOGGED!</h4>
+      <app-insertar></app-insertar>
+    </div>
+
+</div>

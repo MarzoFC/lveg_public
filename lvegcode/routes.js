@@ -11,7 +11,22 @@ const router = app => {
         });
     });
 
-    app.get('/voces', (request, response) => {
+    app.post('/', (req, res) => {
+        pool.query(
+          'INSERT INTO users (name,rol,website,info,contact) VALUES (?,?,?,?,?)',
+          [req.body.name, req.body.rol, req.body.website, req.body.info, req.body.contact],
+          (error) => {
+            if (error) {
+              console.error(error);
+              res.status(500).json({status: 'error'});
+            } else {
+              res.status(200).json({status: 'ok'});
+            }
+          }
+        );
+      });
+
+    app.get('/vocs', (request, response) => {
         pool.query('SELECT * FROM users where rol=?','voz', (error, result) => {
             if (error) throw error;
      
